@@ -12,7 +12,7 @@ const width = 400;
 const height = 400;
 
 const arc = d3.arc()
-    .innerRadius(width /2.3)
+    .innerRadius(width /2)
     .outerRadius(width / 2);
 
 const svg = d3.select('#chart')

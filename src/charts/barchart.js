@@ -6,7 +6,7 @@ async function getResult() {
 
   const margin = { top: 20, right: 20, bottom: 30, left: 50 };
   const width = 600;
-  const height = 350;
+  const height = 400;
 
   const svg = d3.select("#bar-chart")
   .attr("viewBox", `0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`);
@@ -92,7 +92,7 @@ async function getResult() {
   svg.append('text')
     .attr('class', 'title')
     .attr('x', width / 2 + 80)
-    .attr('y', 40)
+    .attr('y', 15)
     .attr('text-anchor', 'middle')
     .text('ISP Comparison')
 

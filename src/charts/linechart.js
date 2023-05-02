@@ -14,7 +14,7 @@ fetch(`https://network-speed-test.azurewebsites.net/stats/userId/history?userId=
     const height = 300;
 
     const svg = d3.select("#line-chart").append("svg")
-        .attr("viewBox", `0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`)
+        .attr("viewBox", `0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom + 50}`)
         .append("g")
         .style("background-color", "#888")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
