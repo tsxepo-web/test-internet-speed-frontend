@@ -1,12 +1,11 @@
-
 function getIP() {
-    fetch("http://ip-api.com/json")
+    fetch("https://ipgeolocation.abstractapi.com/v1/?api_key=d5cac7efc1f849d8b2d4d9c9106187b8")
     .then(res => res.json())
     .then((result) =>{
-        document.querySelector(".ip-address").innerHTML = result.query;
-        document.querySelector(".isp").innerHTML = result.isp;
-        sessionStorage.setItem("ip", result.query);
-        sessionStorage.setItem("isp", result.isp);
+        document.querySelector(".ip-address").innerHTML = result.ip_address;
+        document.querySelector(".isp").innerHTML = result.connection.isp_name;
+        sessionStorage.setItem("ip", result.ip_address);
+        sessionStorage.setItem("isp", result.connection.isp_name);
     })
     .catch((error) => {
         console.log("Error: ", error);
