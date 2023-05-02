@@ -1,7 +1,9 @@
 async function getResult() {
-  const location = sessionStorage.getItem("location");
+  //const location = sessionStorage.getItem("location");
+  const location = "Mobeni Heights";
   const response = await fetch(`https://network-speed-test.azurewebsites.net/stats/ISP?location=${location}`);
   const data = await response.json();
+  console.log(data);
   const isps = data.isPs;
 
   const margin = { top: 20, right: 20, bottom: 30, left: 50 };
