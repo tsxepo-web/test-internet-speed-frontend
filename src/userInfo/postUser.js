@@ -1,16 +1,16 @@
-import { generateUserId } from "./generateUserId.js";
+import { generateUserId } from "./generateUserId";
 
 export async function postData() {
     const uploadSpeed = sessionStorage.getItem("uploadSpeed");
     const downloadSpeed = sessionStorage.getItem("downloadSpeed");
-    const userId = generateUserId();
       
         if (uploadSpeed && downloadSpeed) {
           const body = {
             id: "",
-            userId: userId,
+            userId: localStorage.getItem("userId"),
             ip: sessionStorage.getItem("ip"),
             isp: sessionStorage.getItem("isp"),
+            //isp: "Rain",
             location: sessionStorage.getItem("location"),
             downloadSpeed: Number(sessionStorage.getItem("downloadSpeed")),
             uploadSpeed: Number(sessionStorage.getItem("uploadSpeed")),
