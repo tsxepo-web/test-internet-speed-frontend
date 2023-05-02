@@ -1,5 +1,3 @@
-import { generateUserId } from "./generateUserId";
-
 export async function postData() {
     const uploadSpeed = sessionStorage.getItem("uploadSpeed");
     const downloadSpeed = sessionStorage.getItem("downloadSpeed");
