@@ -11,4 +11,3 @@ export function generateUserId() {
     }
     return userId;
 }
-generateUserId();
