@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <title>Network Speed Test</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">tsxepo</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li class="ip-address"><a href="#"></a></li>
+            <li class="isp"><a href="#"></a></li>
+          </ul>
+        </div>
+    </nav>
+    <div id="chart"></div><hr>
+    <div class="btns">
+        <button id="download">Check Download Speed</button>
+        <button id="upload" hidden>Check Upload Speed</button>
+    </div>
+        <div id='container'>
+            <div id="line-chart" class="box"></div>
+            <svg id="bar-chart" class="box"></svg>
+        </div>
+      <div>
+        <p class="ip-address"></p>
+        <p class="isp"></p>
+      </div>
+      
+	<script type="module" src="charts/piechart.js"></script>
+	<script src="charts/linechart.js"></script>
+	<script src="charts/barchart.js"></script>
+	<script type="module" src="speed/upload.js"></script>
+	<script type="module" src="speed/download.js"></script>
+	<script type="module" src="userInfo/postUser.js"></script>
+	<script src="userInfo/geoLocation.js"></script>
+	<script src="userInfo/ip.js"></script>
+
+</body>
+</html>

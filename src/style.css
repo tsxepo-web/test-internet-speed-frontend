@@ -1,0 +1,117 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+#container {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    text-align: center;
+}
+#container > div, #container > svg {
+    width: 100%;
+}
+
+@media screen and (min-width: 600px) {
+    #container > div {
+        width: 50%;
+    }
+    #container > svg {
+        width: 50%;
+    }
+}
+
+.box {
+    display: inline-block;
+    padding: 1rem 1rem;
+    vertical-align: middle;
+}
+#chart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#download, #upload {
+    background-color: rgb(13, 2, 64);
+    color: white;
+    cursor: pointer;
+}
+#download:hover, #upload:hover {
+    background-color: rgb(77, 63, 118);
+}
+.bar-group {
+    fill: #0d0240;
+}
+#bar-chart text {
+    font-size: 12px;
+    fill: #000;
+}
+
+path {
+    stroke: gray;
+}
+text.value {
+    font-size: 12px;
+}
+text.title {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+text.label {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.line {
+    fill: none;
+    stroke: #060227;
+    stroke-width: 3px;
+}
+
+
+nav {
+    background-color: #333;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#line-chart {
+    width: 100%;
+}
