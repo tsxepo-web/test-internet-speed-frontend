@@ -1,6 +1,5 @@
 import { arcLine, pathForeground } from "../charts/piechart.js";
 import { postData } from "../userInfo/postUser.js";
-//import { downloadClicked } from "./download.js";
 
 const ele = document.getElementById('upload');
 
@@ -9,7 +8,7 @@ export function upload() {
     var lastNow = new Date().getTime();
     var lastKBytes = 0;
     var xhr = new window.XMLHttpRequest();
-    var url = "https://jsonplaceholder.typicode.com/todos";
+    var url = "https://httpbin.org/post";
     xhr.upload.addEventListener("progress", function(e) {
         if (e.lengthComputable) {
             var now = new Date().getTime();
@@ -37,8 +36,10 @@ export function upload() {
     var data = getUploadData(10000 * 1022);
     xhr.open("POST", url, true);
     xhr.send(data)
-    postData();
     
+    xhr.onload = () => {
+        postData();
+    }
     
     function getUploadData(length = 1022) {
         var myData = "d=";

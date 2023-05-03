@@ -1,11 +1,10 @@
 import { arcLine, pathForeground } from "../charts/piechart.js";
-import { postData } from "../userInfo/postUser.js";
 import { upload } from "./upload.js";
 
 const el = document.getElementById('download');
   
 el.addEventListener('click', () => {
-    const url = 'https://thumbs.dreamstime.com/b/environment-earth-day-hands-trees-growing-seedlings-bokeh-green-background-female-hand-holding-tree-nature-field-gra-130247647.jpg';
+    const url = 'https://img.yumpu.com/30389839/1/500x640/download-20-pages-45-mb-university-of-victoria.jpg';
     var lastNow = new Date().getTime();
     var lastKBytes = 0;
     const xhr = new XMLHttpRequest();   
@@ -33,11 +32,11 @@ el.addEventListener('click', () => {
         sessionStorage.setItem("downloadSpeed", mbps);
      }        
     }
-    xhr.onload = () => {
-        document.querySelector('.textBox').innerHTML = "Checking Upload";
-        
-        setInterval(upload, 1000);
-    }
     xhr.open('GET', url + '?n=' + Math.random(), true);
     xhr.send();
+
+    xhr.onload = () => {
+        document.querySelector('.textBox').innerHTML = "Checking Upload";
+        upload();
+    }
 });
