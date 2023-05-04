@@ -1,4 +1,4 @@
-import { showPosition } from "./userCoordinates";
+import { showPosition } from "./userCoordinates.js";
 
 async function getLocation() {
     if (navigator.geolocation) {
@@ -7,5 +7,4 @@ async function getLocation() {
         alert("Geo location is not supported by this browser.");
     }
 }
-showPosition(position);
 getLocation();

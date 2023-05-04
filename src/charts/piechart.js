@@ -33,8 +33,8 @@ const arcs = group.selectAll('path')
     .attr('fill', '#fff')
 
 export const arcLine = d3.arc()
-    .innerRadius(width/2.3)
-    .outerRadius(height/2)
+    .innerRadius(width/2.8)
+    .outerRadius(height/2.4)
     .cornerRadius(5)
     .startAngle(-Math.PI/2)
     .endAngle(function(d) {return (d/180) * Math.PI - Math.PI/2;});
@@ -47,7 +47,7 @@ export const pathForeground = group.append('path')
     .style("stroke-width", 1);
 
 const text = group.append('text')
-    .text('Start')
+    .text('Mbps')
     .attr('class', 'textBox')
     .attr('text-anchor', 'middle')
     .style('font-size', '24px')
@@ -62,6 +62,6 @@ const numbers = group.selectAll('text')
   .attr('text-anchor', 'middle')
   .attr('x', d => (width/4 + 20) * Math.cos((d - 180) * Math.PI / 180))
   .attr('y', d => (width/4 + 20) * Math.sin((d - 180) * Math.PI / 180))
-  .attr('font-size', '16px')
+  .attr('font-size', d=> (d <= 60) ? "24px" : "16px")
   .attr('stroke', 'black')
   .attr('transforn', d => `rotate(${d - 90})`);
