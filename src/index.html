@@ -5,22 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/png/logo-black.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/831205a5cd.js" crossorigin="anonymous"></script>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <title>Network Speed Test</title>
 </head>
 <body>
     <nav>
         <div class="nav-wrapper">
-          <a href="#" class="brand-logo">tsxepo</a>
+            <div class="logo">
+                <a href="#" class="brand-logo"><img src="images/png/logo-color.png" alt="tsxepo=logo"></a>
+            </div>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li class="ip-address"><a href="#"></a></li>
             <li class="isp"><a href="#"></a></li>
           </ul>
         </div>
-    </nav>
-    <div id="chart"></div><hr>
+    </nav><br>
+    <div id="chart">
+    </div><hr>
     <div class="btns">
-        <button id="download">Check Speed</button>
+        <button id="check-speed">Check Speed</button>
+        <p><i class="fa-sharp fa-solid fa-download"></i><span id="download"></span></p><br>
+        <p><i class="fa-solid fa-upload"></i><span id="upload"></span></p>
     </div>
         <div id='container'>
             <div id="line-chart" class="box"></div>

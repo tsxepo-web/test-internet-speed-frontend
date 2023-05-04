@@ -10,6 +10,5 @@ function getIP() {
     .catch((error) => {
         console.log("Error: ", error);
     });
-    }
-    
-    getIP();
+}
+getIP();
