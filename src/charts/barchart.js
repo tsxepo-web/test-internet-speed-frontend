@@ -1,6 +1,5 @@
 async function getResult() {
-  //const location = sessionStorage.getItem("location");
-  const location = "Mobeni Heights";
+  const location = sessionStorage.getItem('location');
   const response = await fetch(`https://network-speed-test.azurewebsites.net/stats/ISP?location=${location}`);
   const data = await response.json();
   const isps = data.isPs;
@@ -9,7 +8,7 @@ async function getResult() {
   const width = 600;
   const height = 400;
 
-  const svg = d3.select("#bar-chart")
+  const svg = d3.select('#bar-chart')
   .attr("viewBox", `0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`);
     
   const svgContainer = d3.select('#container');
@@ -24,6 +23,9 @@ async function getResult() {
     .range([margin.left, width - margin.right])
     .padding(0.1);
 
+  const colorScale = d3.scaleOrdinal(d3.schemeCategory10)
+    .domain(isps.map(d => d.isp));
+
   svg.append('g')
     .attr('transform', `translate(0,${height - margin.bottom})`)
     .call(d3.axisBottom(x));
@@ -35,12 +37,11 @@ async function getResult() {
   svg.selectAll('rect')
       .data(isps)
       .enter().append('rect')
-      .attr('class', 'bar-group')
       .attr('x', d => x(d.isp))
       .attr('y', d => y(d.downloadSpeed))
       .attr('width', x.bandwidth())
       .attr('height', d => y(0) - y(d.downloadSpeed))
-      .attr('fill', 'steelblue')
+      .attr('fill', d => colorScale(d.isp))
       .on('mouseenter', function (actual, i) {
         d3.selectAll('.value')
           .attr('opacity', 0)
@@ -95,7 +96,7 @@ async function getResult() {
     .attr('x', width / 2 + 80)
     .attr('y', 15)
     .attr('text-anchor', 'middle')
-    .text('ISP Comparison')
+    .text('ISP Comparison');
 
 }
 getResult();
