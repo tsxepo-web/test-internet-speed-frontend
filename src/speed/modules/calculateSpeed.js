@@ -1,4 +1,4 @@
-import { uploadResults } from "./showUploadResults.js";
+import { showResults } from "./showUploadResults.js";
 
 export function calculateSpeed(e, lastKBytes, lastNow) {
     var now = new Date().getTime();
@@ -14,7 +14,8 @@ export function calculateSpeed(e, lastKBytes, lastNow) {
     var mbps = elapsed ? uploadedMbs / elapsed : 0 ;
     lastKBytes = kbytes; 
     lastNow = now;
+    
     console.log(mbytes.toFixed(2) + "MB (" + percent.toFixed(3) + "%) " + kbps.toFixed(2) + "KB/s");
-    uploadResults(kbps, mbps);
+    showResults(kbps, mbps);
     return mbps.toFixed(3);
 }

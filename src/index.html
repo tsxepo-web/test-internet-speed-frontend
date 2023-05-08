@@ -23,22 +23,21 @@
         </div>
     </nav><br>
     <div id="chart">
-    </div><hr>
-    <div class="btns">
-        <button id="check-speed">Start</button>
-        <p><i class="fa-sharp fa-solid fa-download"></i><span id="download"></span></p><br>
+        <div id="speedometer"></div>
+    </div>
+    <div class="icons">
+        <p><i class="fa-sharp fa-solid fa-download"></i><span id="download"></span></p>
         <p><i class="fa-solid fa-upload"></i><span id="upload"></span></p>
     </div>
         <div id='container'>
-            <div id="line-chart" class="box"></div>
-            <svg id="bar-chart" class="box"></svg>
+            <div id="line-chart"></div>
+            <div id="bar-chart"></div>
         </div>
       
     <script type="module" src="userInfo/generateUserId.js"></script>
-	<script type="module" src="charts/piechart.js"></script>
-	<script type="module" src="charts/linechart.js"></script>
-	<script type="module" src="charts/barchart.js"></script>
-	<script type="module" src="speed/download.js"></script>
+	<script type="module" src="charts/donutchart.js"></script>
+	<script type="module" src="charts/results/historyResults.js"></script>
+	<script type="module" src="charts/results/ispResults.js"></script>
 	<script type="module" src="userInfo/geoLocation.js"></script>
 	<script type="module" src="userInfo/ip.js"></script>
 

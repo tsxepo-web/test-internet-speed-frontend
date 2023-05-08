@@ -1,4 +1,4 @@
-export function uploadResults(kbps, mbps) {
+export function showResults(kbps, mbps) {
     if(mbps >= 1) {
         document.querySelector('.textBox').innerHTML = mbps.toFixed(3) + 'Mbps';
     }else {

@@ -1,85 +1,8 @@
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
-#container {
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    border: 1px solid black;
-    text-align: center;
-}
-#container > div, #container > svg {
-    width: 100%;
-}
-
-@media screen and (min-width: 600px) {
-    #container > div {
-        width: 50%;
-    }
-    #container > svg {
-        width: 50%;
-    }
-}
-
-.box {
-    display: inline-block;
-    padding: 1rem 1rem;
-    vertical-align: middle;
-}
-#chart {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.btns {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#check-speed {
-    background-color: rgb(13, 2, 64);
-    color: white;
-    cursor: pointer;
-}
-#check-speed:hover {
-    background-color: rgb(77, 63, 118);
-}
-.bar-group {
-    fill: #0d0240;
-}
-#bar-chart text {
-    font-size: 12px;
-    fill: #000;
-}
-
-path {
-    stroke: gray;
-}
-text.value {
-    font-size: 12px;
-}
-text.title {
-    font-size: 22px;
-    font-weight: 600;
-}
-
-text.label {
-    font-size: 12px;
-    font-weight: 400;
-}
-
-.line {
-    fill: none;
-    stroke: #060227;
-    stroke-width: 3px;
-}
-
-
 nav {
     background-color: #333;
     height: 50px;
@@ -112,10 +35,55 @@ nav ul li a {
     font-size: 16px;
 }
 
+#container { 
+    flex-wrap: nowrap;
+    border: 1px solid black;
+    text-align: center;
+}
+#chart, #container,.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.line {
+    stroke: #d99100;
+    stroke-width: 4px;
+}
+
 .logo img {
     height: 30px;
     display: block;
 }
-#line-chart {
-    width: 100%;
+
+#bar-chart,
+#line-chart  {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+    #container {
+        display: flex;
+    }
+    #line-chart,
+    #bar-chart {
+        width: 100%;
+    }
+}
+
+path {
+    fill: none;
+    stroke: steelblue;
+    stroke-width: 1.5;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+}
+
+.grid-lines line {
+    stroke: gray;
+    stroke-opacity: 0.2;
 }
