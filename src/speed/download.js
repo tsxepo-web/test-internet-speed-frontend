@@ -1,7 +1,6 @@
 import { downloadStart } from "./modules/beginDownload.js";
 import { downloadEnd } from "./modules/finishDownload.js";
 
-//const el = document.getElementById('check-speed');
   
  export function downloading() {
     const url = 'https://img.yumpu.com/30389839/1/500x640/download-20-pages-45-mb-university-of-victoria.jpg';
