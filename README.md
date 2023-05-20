@@ -1,6 +1,7 @@
 <h1>Welcome to Internet Speed Test</h1>
 <p></p>
 
+![design](https://github.com/tsxepo-web/test-internet-speed-frontend/blob/master/speedTestFront.drawio.png)
 
 ## URLs
 * Frontend:[Test-Internet-Speed](https://gray-glacier-0556ff10f.3.azurestaticapps.net).
